@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="vendor.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="modernizr.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <title>You</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+
+<body class="ss-bg-white">
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="top" class="s-wrap site-wrapper">
+
+        <!-- site header
+        ================================================== -->
+        <header class="s-header header">
+
+            <div class="header__top">
+                <div class="header__logo">
+                    <a class="site-logo" href="/">
+                        <img src="/logo1.png" alt="Homepage">
+                    </a>
+                </div>
+
+                <div class="header__search">
+
+                    <form role="search" method="get" class="header__search-form" action="#">
+                        <label>
+                            <span class="hide-content">Search for:</span>
+                            <input type="search" class="header__search-field" placeholder="Type Keywords" value=""
+                                name="s" title="Search for:" autocomplete="off">
+                        </label>
+                        <input type="submit" class="header__search-submit" value="Search">
+                    </form>
+
+                    <a href="#0" title="Close Search" class="header__search-close">Close</a>
+
+                </div> <!-- end header__search -->
+
+                <!-- toggles -->
+                <a href="#0" class="header__search-trigger"></a>
+                <a href="#0" class="header__menu-toggle"><span>Menu</span></a>
+
+            </div>
+
+            <nav class="header__nav-wrap">
+
+                <ul class="header__nav">
+                    <li><a href="index.html" title="">Home</a></li>
+                    <li class="has-children">
+                    <li class="has-children">
+                        <a href="#0" title="">Blog Posts</a>
+                        <ul class="sub-menu">
+                            <li><a href="single-video.html">Video Post</a></li>
+                            <li><a href="single-audio.html">Audio Post</a></li>
+                            <li><a href="single-gallery.html">Gallery Post</a></li>
+                            <li><a href="single-standard.html">Standard Post</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/aboutus" title="">About US</a></li>
+                    <li><a href="page-contact.html" title="">Contact</a></li>
+                    <li><a href="/profile" title="">////////////////////////////</a></li>
+                    {{#if user }}
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/auth/logout">Logout</a></li>
+                    {{else}}
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                    {{/if}}
+                    <li><a href="/" title="">////////////////////////////</a></li>
+                </ul> <!-- end header__nav -->
+
+                <ul class="header__social">
+                    <li class="ss-facebook">
+                        <a href="https://facebook.com/">
+                            <span class="screen-reader-text">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="ss-twitter">
+                        <a href="#0">
+                            <span class="screen-reader-text">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="ss-dribbble">
+                        <a href="#0">
+                            <span class="screen-reader-text">Dribbble</span>
+                        </a>
+                    </li>
+                    <li class="ss-pinterest">
+                        <a href="#0">
+                            <span class="screen-reader-text">Behance</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </nav> <!-- end header__nav-wrap -->
+
+        </header> <!-- end s-header -->
+
+        <!-- site content
+        ================================================== -->
+        <div class="s-content content">
+            <main class="row content__page">
+
+                <article class="column large-full entry format-standard">
+
+                    <div class="media-wrap entry__media">
+                        <div class="entry__post-thumb">
+                            <img src="{{imagem1}}" alt="">
+                        </div>
+                    </div>
+
+                    <div class="content__page-header entry__header">
+                        <h1 class="display-1 entry__title">
+                            China and US pledge climate change commitment
+                        </h1>
+                        <ul class="entry__header-meta">
+                            <li class="author">By <a href="#0">{{user.name}}</a></li>
+                            <li class="date">April 30, 2019</li>
+                            <li class="cat-links">
+                                <a href="#0">Marketing</a><a href="#0">Management</a>
+                            </li>
+                        </ul>
+                    </div> <!-- end entry__header -->
+
+                    <div class="entry__content">
+
+                        <p class="lead drop-cap">
+                            China and the US say they are committed to working together and with other countries on
+                            tackling climate change.
+
+                            It comes after several meetings between Chinese climate envoy Xie Zhenhua and his US
+                            counterpart John Kerry in Shanghai last week.
+
+                            They both agreed on further specific actions to reduce emissions, a joint statement on
+                            Sunday confirmed.
+
+                            US President Joe Biden is holding a virtual climate summit this week, which China says it is
+                            looking forward to.
+
+                            However it is not yet known if Chinese President Xi Jinping will join the world leaders who
+                            have pledged to attend.
+
+                            "The United States and China are committed to cooperating with each other and with other
+                            countries to tackle the climate crisis, which must be addressed with the seriousness and
+                            urgency that it demands," the statement said.
+                        </p>
+
+                        <p>
+                            <img src="{{image_f}}" alt="">
+                        </p>
+
+                        <h2>It added that both nations will continue to discuss "concrete actions in the 2020s to reduce
+                            emissions aimed at keeping the Paris Agreement-aligned temperature limit within reach".
+
+                            Both nations also agreed to help developing countries finance a switch to low-carbon energy.
+
+                            Li Shuo, senior climate adviser for environmental group Greenpeace, described the statement
+                            as "positive".
+
+                            "It sends a very unequivocal message that on this particular issue (China and the United
+                            States) will co-operate. Before the meetings in Shanghai this was not a message that we
+                            could assume, " Mr Li told Reuters news agency.</h2>
+
+                        <p>
+                            The joint statement - issued symbolically at a round table - will relieve anyone concerned
+                            about the planet. It simply won't be possible to stabilise climate change unless the
+                            superpower super-polluters pull much harder. A recent report said China, for instance, must
+                            close down 588 coal-fired power plants to meet its climate pledges.
+
+                            Is China heading in the right direction on coal? No - its regional governors have been
+                            building even more coal plants to stimulate the economy.
+
+                            One outcome from the US-China meeting is the acknowledgement that finance flows should be
+                            channelled to low-carbon projects, not high carbon. Both sides have also promised plans for
+                            reducing their own emissions further. President Biden will unveil his proposals at or before
+                            the US summit this coming week.
+
+                            President Xi is playing coy over whether he'll attend the summit. Instead he may announce
+                            tighter Chinese targets at the Boao Forum - a Chinese forum for business and government
+                            leaders - also this week. And don't forget: all other nations need to commit to tackling the
+                            climate - not just the superpowers.
+                        </p>
+
+
+                        <p>
+                            Climate scientists warn that global warming must not rise more than 2C above pre-industrial
+                            levels - in fact the aim should be well below this with an increasingly ambitious 1.5C goal,
+                            to avoid the worst of climate breakdown.
+
+                            Central to the Paris Agreement are nationally determined contributions (NDCs). These are
+                            targets intended to cut emissions.
+
+                            NDCs represent the commitments by each country - under the Paris pact - to reduce their own
+                            national emissions and adapt to the impacts of climate change.
+
+                            According to the Climate Action Tracker, an independent scientific analysis that tracks
+                            government climate action, China's NDC rating is "highly insufficient" and "are not at all
+                            consistent with holding warming to below 2C".
+
+                            China has pledged to peak its emissions by 2030, and achieve carbon neutrality by 2060 (that
+                            means cutting out all carbon emissions from fossil fuels but still allowing farm emissions
+                            of methane - another planet-heating gas).
+
+                            However, China is currently running 1,058 coal plants - more than half the world's capacity.
+
+                            The US, meanwhile, has the worst NDC rating of "critically insufficient" on the Climate
+                            Action Tracker.
+
+                            The US was absent from climate negotiations during President Donald Trump's term of office
+                            and it is now being urged to cut emissions to between 57% and 63% below 2005 levels this
+                            decade.
+                        </p>
+
+
+
+                        <p>
+                            The US was absent from climate negotiations during President Donald Trump's term of office
+                            and it is now being urged to cut emissions to between 57% and 63% below 2005 levels this
+                            decade.
+                        </p>
+
+                    </div> <!-- end entry content -->
+
+                </article> <!-- end column large-full entry-->
+
+
+                <div class="column large-12 comment-respond">
+
+
+
+                </div>
+                <!-- END respond-->
+
+        </div> <!-- end comment-respond -->
+
+    </div> <!-- end comments-wrap -->
+    </main>
+
+    </div> <!-- end s-content -->
+
+
+    <!-- footer
+        ================================================== -->
+    <footer class="s-footer">
+        <div class="row">
+            <div class="column large-full footer__content">
+                <div class="footer__copyright">
+                    <span>© Copyright Jantsan Chuluunbat</span>
+                    <span>Design by <a href="/">ME MYSELF & I</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div> <!-- end s-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="plugins.js"></script>
+    <script src="main.js"></script>
+
+</body>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <title>Manage Users</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/">
+            <img src="/logo1.png" alt="Homepage">
+        </a>
+        <ul>
+            <li><a href="/profile">Back</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="card-header" style="color: rgb(255, 255, 255)">
+            <h1>Manage</h1>
+        </div>
+        <!--impor-->
+        <table>
+            <th>
+                id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Password
+            </th>
+            <th>
+                Profile Picture
+            </th>
+            <th>
+                Posts
+            </th>
+            <th>
+                Action
+            </th>
+            {{#each users}}
+            <tr>
+                <td>
+                    {{id}}
+                </td>
+                <td>
+                    {{name}}
+                </td>
+                <td>
+                    {{email}}
+                </td>
+                <td>
+                    {{password}}
+                </td>
+                <th>
+                    <img src="images/{{image1}}" alt="">
+                </th>
+                <td>
+                    <a href="/posts"><input type="submit" value="Edit"></a>
+                </td>
+                <td>
+                    <a href="/update/{{id}}"><input type="submit" value="Edit"></a>
+                    <form action="auth/delete/{{id}}" method="post"><input type="submit" value="Delete"></form>
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+        <!--aa-->
+
+    </div>
+
+    {{#if message }}
+    <h4 class="alert alert-danger mt-4">{{message}}</h4>
+    {{/if}}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

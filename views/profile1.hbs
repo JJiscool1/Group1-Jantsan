@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="vendor.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="modernizr.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <title>Profile</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+
+    <!--body-->
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="top" class="s-wrap site-wrapper">
+
+        <!-- site header
+        ================================================== -->
+        <header class="s-header">
+
+            <div class="header__top">
+                <div class="header__logo">
+                    <a class="site-logo" href="/">
+                        <img src="/logo1.png" alt="Homepage">
+                    </a>
+                </div>
+
+                <div class="header__search">
+
+                    <form role="search" method="get" class="header__search-form" action="#">
+                        <label>
+                            <span class="hide-content">Search for:</span>
+                            <input type="search" class="header__search-field" placeholder="Type Keywords" value=""
+                                name="s" title="Search for:" autocomplete="off">
+                        </label>
+                        <input type="submit" class="header__search-submit" value="Search">
+                    </form>
+
+                    <a href="#0" title="Close Search" class="header__search-close">Close</a>
+
+                </div> <!-- end header__search -->
+
+                <!-- toggles -->
+                <a href="#0" class="header__search-trigger"></a>
+                <a href="#0" class="header__menu-toggle"><span>Menu</span></a>
+
+            </div> <!-- end header__top -->
+
+            <nav class="header__nav-wrap">
+
+                <ul class="header__nav">
+                    <li class="current"><a href="/" title="">Home</a></li>
+                    <li><a href="/uploadForm" title="">Create a Post</a></li>
+                    <li><a href="page-about.html" title="">About U</a></li>
+                    <li><a href="/auth/logout" title="">LogOut</a></li>
+                </ul> <!-- end header__nav -->
+
+                <ul class="header__social">
+                    <li class="ss-facebook">
+                        <a href="https://facebook.com/">
+                            <span class="screen-reader-text">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="ss-twitter">
+                        <a href="#0">
+                            <span class="screen-reader-text">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="ss-dribbble">
+                        <a href="#0">
+                            <span class="screen-reader-text">Dribbble</span>
+                        </a>
+                    </li>
+                    <li class="ss-pinterest">
+                        <a href="#0">
+                            <span class="screen-reader-text">Behance</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </nav> <!-- end header__nav-wrap -->
+
+
+
+        </header> <!-- end s-header -->
+
+        <div class="s-content">
+
+            <div class="masonry-wrap">
+
+                <div class="masonry">
+
+                    <div class="grid-sizer"></div>
+
+                    <article class="masonry__brick entry format-standard animate-this">
+
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="entry__thumb-link">
+                                <img src="images/thumbs/masonry/woodcraft-600.jpg"
+                                    srcset="images/thumbs/masonry/woodcraft-600.jpg 1x, images/thumbs/masonry/woodcraft-1200.jpg 2x"
+                                    alt="">
+                            </a>
+                        </div>
+
+                        <div class="entry__text">
+                            <div class="entry__header">
+
+                                <h2 class="entry__title"><a href="single-standard.html">A stool that is not a stool
+                                    </a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a href="category.html">Design</a>
+                                        <a href="category.html">Photography</a>
+                                    </span>
+                                    <span class="entry__meta-date">
+                                        <a href="single-standard.html">Apr 29, 2025</a>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                <h5 class="card-title">{{user.name}}</h5>
+                                Contact at
+                                {{user.email}}
+                                </p>
+                            </div>
+                        </div>
+
+                    </article> <!-- end article -->
+
+                    <article class="masonry__brick entry format-quote animate-this">
+
+                        <div class="entry__thumb">
+                            <blockquote>
+                                <p>"The greatest glory in living lies not in never falling, but in rising every time we
+                                    fall.".</p>
+
+                                <cite>-Nelson Mandela</cite>
+                            </blockquote>
+                        </div>
+
+                    </article> <!-- end article -->
+
+
+
+
+
+                    <div class="go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                    </div>
+                    </footer>
+
+                </div> <!-- end s-wrap -->
+                <script src="/jquery-3.2.1.min.js"></script>
+                <script src="/plugins.js"></script>
+                <script src="/main.js"></script>
+</body>
+<!--/body-->
+
+</html>

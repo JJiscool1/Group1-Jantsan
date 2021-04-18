@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/login.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <nav>
+    <a href="/">
+      <img src="/logo1.png" alt="Homepage" class="cente">
+    </a>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="card" style="background-color: black">
+      <div class="card-header" style="color: White">
+        <h1>Login</h1>
+      </div>
+
+      <form action="/auth/login" method="POST">
+        <div class="container">
+          <label for="email" style="color:rgb(255, 255, 255);">Email Address</label>
+          <input type="emai" placeholder="Enter Email Address" id="email" name="email" required>
+
+          <label for="password" style="color:rgb(255, 255, 255);">Password</label>
+          <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+          <button type="submit">Login</button>
+
+        </div>
+        <div class="container" style="background-color:#fd3d3d">
+          <span class="center"><a href="/register">
+              <span class="hw"><a href="/register"><b>Do not have an account
+                    ?</a></span></b></a></span>
+          </a></span>
+        </div>
+        {{#if message }}
+        <h4 class="alert alert-danger mt-4">{{message}}</h4>
+        {{/if}}
+      </form>
+
+
+
+
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

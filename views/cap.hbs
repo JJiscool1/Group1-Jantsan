@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/login.css">
+    <title>Update</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/">
+            <img src="/logo1.png" alt="Homepage" class="cente">
+        </a>
+
+    </nav>
+
+    <div class="container mt-4">
+        <div class="card" style="background-color: black">
+            <div class="card-header" style="color: rgb(255, 255, 255)">
+                <h1>Make a post</h1>
+            </div>
+            <form action="/action_page.php" method="post">
+                <div class="container">
+
+                    <label for="uname" style="color:rgb(255, 255, 255);"><strong>Header</strong></label>
+                    <input type="text" name="header" id="header" placeholder="Enter a Text">
+
+                    <label for="psw" style="color:rgb(255, 255, 255);"><strong>Highlight</strong></label>
+                    <input type="password" name="highlight" id="highlight" placeholder="Enter a Text">
+
+                    <label for="psw" style="color:rgb(255, 255, 255);"><strong>Main</strong></label>
+                    <input type="password" name="main" id="main" placeholder="Enter a Text">
+
+                    <label for="psw" style="color:rgb(255, 255, 255);"><strong>Image</strong></label>
+                    <input type="file" name="image" id="image" accept="image/*" />
+
+                    <button type="submit" value="upload">Upload</button>
+
+                </div>
+                <div class="container" style="background-color:#f1f1f1">
+                    <span class="center">
+                        <h3>POST NOW</h3>
+
+                    </span>
+                </div>
+            </form>
+        </div>
+
+        {{#if message }}
+        <h4 class="alert alert-danger mt-4">{{message}}</h4>
+        {{/if}}
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

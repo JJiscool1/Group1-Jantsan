@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/login.css">
+    <title>Update</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/">
+            <img src="/logo1.png" alt="Homepage" class="cente">
+        </a>
+
+    </nav>
+
+    <div class="container mt-4">
+        <div class="card" style="background-color: black">
+            <div class="card-header" style="color: rgb(255, 255, 255)">
+                <h1>Make a post</h1>
+            </div>
+            <form action="/auth/uploadForm" method="POST" enctype="multipart/form-data">
+                <div class="container">
+
+                    <label for="uname" style="color:rgb(255, 255, 255);"><strong>Header on display</strong></label>
+                    <input type="text" name="header_f" id="header_f" placeholder="Enter Text">
+
+                    <label for="psw" style="color:rgb(255, 255, 255);"><strong>Highlight</strong></label>
+                    <input type="passwor" name="highlight_f" id="highlight_f" placeholder="Enter Text">
+
+                    <label for="psw" style="color:rgb(255, 255, 255);"><strong>Main</strong></label>
+                    <input type="passwor" name="main_f" id="main_f" placeholder="Enter Text">
+
+                    <label for="psw" style="color:rgb(255, 255, 255);"><strong>Image</strong></label>
+                    <input type="file" name="image_f" id="image_f" accept="image/*" />
+
+                    <label for="uname" style="color:rgb(255, 255, 255);"><strong>Header Main</strong></label>
+                    <input type="text" name="header" id="header" placeholder="Enter Text">
+
+                    <label for="uname" style="color:rgb(255, 255, 255);"><strong>First paragraph</strong></label>
+                    <input type="text" name="firstp" id="firstp" placeholder="Enter Text">
+
+                    <label for="uname" style="color:rgb(255, 255, 255);"><strong>Second paragraph</strong></label>
+                    <input type="text" name="secondp" id="secondp" placeholder="Enter Text">
+
+                    <label for="uname" style="color:rgb(255, 255, 255);"><strong>Third paragraph</strong></label>
+                    <input type="text" name="thirdp" id="thirdp" placeholder="Enter Text">
+
+                    <label for="uname" style="color:rgb(255, 255, 255);"><strong>Ending paragraph</strong></label>
+                    <input type="text" name="endp" id="endp" placeholder="Enter Text">
+
+                    <label for="psw" style="color:rgb(255, 255, 255);"><strong>Image on Main page /1/</strong></label>
+                    <input type="file" name="imagem1" id="imagem1" accept="image/*" />
+
+                    <label for="psw" style="color:rgb(255, 255, 255);"><strong>Image on Main page /2/</strong></label>
+                    <input type="file" name="imagem2" id="imagem2" accept="image/*" />
+
+                    <label for="uname" style="color:rgb(255, 255, 255);"><strong>Link</strong></label>
+                    <input type="text" name="link" id="link" placeholder="Enter a link">
+
+
+
+                    <button type="submit" value="upload">Upload</button>
+
+                </div>
+                <div class="container" style="background-color:#f1f1f1">
+                    <span class="center">
+                        <h3>POST NOW</h3>
+
+                    </span>
+                </div>
+            </form>
+        </div>
+
+        {{#if message }}
+        <h4 class="alert alert-danger mt-4">{{message}}</h4>
+        {{/if}}
+    </div>
